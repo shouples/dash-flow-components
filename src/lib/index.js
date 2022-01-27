@@ -1,6 +1,3 @@
 /* eslint-disable import/prefer-default-export */
-import Flow from './components/Flow.react';
-
-export {
-    Flow
-};
+export {default as Flow} from './components/Flow.react';
+export {default as MiniMap} from './components/MiniMap.react';

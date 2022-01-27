@@ -10,6 +10,114 @@
         },
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "elements": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "object"
+          }
+        },
+        "required": false,
+        "description": "Node/edge elements contained within svg space."
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Tells dash if any prop has changed its value."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS style attributes for div wrapper around ReactFlow component.",
+        "defaultValue": {
+          "value": "{width: '800px', height: '600px'}",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": ""
+      },
+      "snapGrid": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "number"
+          }
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "src/lib/components/MiniMap.react.js": {
+    "description": "",
+    "displayName": "MiniMap",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "nodeColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "nodeBorderRadius": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": ""
+      },
+      "nodeStrokeWidth": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": ""
+      },
+      "nodeClassName": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "maskColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
       }
     }
   }

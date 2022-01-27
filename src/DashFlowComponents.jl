@@ -6,6 +6,7 @@ const resources_path = realpath(joinpath( @__DIR__, "..", "deps"))
 const version = "0.0.1"
 
 include("jl/dfc_flow.jl")
+include("jl/dfc_minimap.jl")
 
 function __init__()
     DashBase.register_package(
