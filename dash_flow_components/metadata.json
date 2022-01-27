@@ -1,0 +1,16 @@
+{
+  "src/lib/components/Flow.react.js": {
+    "description": "",
+    "displayName": "Flow",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      }
+    }
+  }
+}

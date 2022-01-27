@@ -1,0 +1,11 @@
+include dash_flow_components/dash_flow_components.min.js
+include dash_flow_components/dash_flow_components.min.js.map
+include dash_flow_components/async-*.js
+include dash_flow_components/async-*.js.map
+include dash_flow_components/*-shared.js
+include dash_flow_components/*-shared.js.map
+include dash_flow_components/metadata.json
+include dash_flow_components/package-info.json
+include README.md
+include LICENSE
+include package.json
