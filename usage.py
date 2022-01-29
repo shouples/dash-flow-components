@@ -31,16 +31,20 @@ elements = [
 
 app.layout = html.Div([
     dfc.Flow(
-        id='flow',
-        elements=elements,
-    ),
-    dcc.Dropdown(
         children=[
             dfc.MiniMap(
                 nodeColor="red"
             ),
             dfc.Controls(),
         ],
+        id='flow',
+        elements=elements,
+        style=dict(
+            width="1000px",
+            height="600px",
+        ),
+    ),
+    dcc.Dropdown(
         id='add-node-type',
         options=[
             {'label': v, 'value': v}
