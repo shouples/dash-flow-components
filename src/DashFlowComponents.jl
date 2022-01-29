@@ -5,6 +5,8 @@ using Dash
 const resources_path = realpath(joinpath( @__DIR__, "..", "deps"))
 const version = "0.0.1"
 
+include("jl/dfc_background.jl")
+include("jl/dfc_controls.jl")
 include("jl/dfc_flow.jl")
 include("jl/dfc_minimap.jl")
 

@@ -1,16 +1,17 @@
 % Auto-generated: do not edit by hand
-\name{dfcFlow}
+\name{dfcDashFlow}
 
-\alias{dfcFlow}
+\alias{dfcDashFlow}
 
-\title{Flow component}
+\title{DashFlow component}
 
 \description{
 
 }
 
 \usage{
-dfcFlow(children=NULL, id=NULL, elements=NULL, style=NULL)
+dfcDashFlow(children=NULL, id=NULL, elements=NULL, snapGrid=NULL,
+style=NULL)
 }
 
 \arguments{
@@ -19,6 +20,8 @@ dfcFlow(children=NULL, id=NULL, elements=NULL, style=NULL)
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
 \item{elements}{List of named lists. Node/edge elements contained within svg space.}
+
+\item{snapGrid}{List of numerics. }
 
 \item{style}{Named list. CSS style attributes for div wrapper around ReactFlow component.}
 }

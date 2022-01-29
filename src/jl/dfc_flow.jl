@@ -14,11 +14,10 @@ Keyword arguments:
 - `children` (Bool | Real | String | Dict | Array; optional)
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `elements` (Array of Dicts; optional): Node/edge elements contained within svg space.
-- `snapGrid` (Array of Reals; optional)
 - `style` (Dict; optional): CSS style attributes for div wrapper around ReactFlow component.
 """
 function dfc_flow(; kwargs...)
-        available_props = Symbol[:children, :id, :elements, :snapGrid, :style]
+        available_props = Symbol[:children, :id, :elements, :style]
         wild_props = Symbol[]
         return Component("dfc_flow", "Flow", "dash_flow_components", available_props, wild_props; kwargs...)
 end

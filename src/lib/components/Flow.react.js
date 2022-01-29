@@ -14,20 +14,28 @@ const Flow = (props) => {
         ...otherProps
     } = props;
 
-    const updateProps = (value) => {
-        setProps({ value });
+    console.log("elements", elements);
+    const [stateElements, setElements] = useState(elements);
+    console.log("stateElements", stateElements);
+
+    const onConnect = (params) => {
+        setElements((els) => addEdge(params, els))
     };
 
-    const [stateElements, setElements] = useState(elements);
-    const onConnect = (params) => setElements((els) => addEdge(params, els));
+    const onChange = (params) => {
+        console.log("onChange:", params);
+    }
 
     return (
-        <div id={id} style={style}>
+        <div
+            id={id}
+            style={style}
+        >
             <ReactFlow
                 {...otherProps}
                 elements={stateElements}
-                onChange={updateProps}
                 onConnect={onConnect}
+                onChange={onChange}
             >
                 {children}
             </ReactFlow>
@@ -62,7 +70,6 @@ Flow.propTypes = {
 
     children: PropTypes.any,
 
-    snapGrid: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default Flow;

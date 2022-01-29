@@ -1,16 +1,16 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-dfcFlow <- function(children=NULL, id=NULL, elements=NULL, style=NULL) {
+dfcBackground <- function(id=NULL, className=NULL, color=NULL, gap=NULL, size=NULL, style=NULL, variant=NULL) {
     
-    props <- list(children=children, id=id, elements=elements, style=style)
+    props <- list(id=id, className=className, color=color, gap=gap, size=size, style=style, variant=variant)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
     component <- list(
         props = props,
-        type = 'Flow',
+        type = 'Background',
         namespace = 'dash_flow_components',
-        propNames = c('children', 'id', 'elements', 'style'),
+        propNames = c('id', 'className', 'color', 'gap', 'size', 'style', 'variant'),
         package = 'dashFlowComponents'
         )
 

@@ -1,4 +1,7 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+export(dfcBackground)
+export(dfcControls)
 export(dfcFlow)
 export(dfcMiniMap)
+export(dfcDashFlow)

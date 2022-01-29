@@ -33,13 +33,13 @@ app.layout = html.Div([
     dfc.Flow(
         id='flow',
         elements=elements,
-        snapGrid=[15,15],
     ),
     dcc.Dropdown(
         children=[
             dfc.MiniMap(
                 nodeColor="red"
-            )
+            ),
+            dfc.Controls(),
         ],
         id='add-node-type',
         options=[

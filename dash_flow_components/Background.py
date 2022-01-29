@@ -3,29 +3,33 @@
 from dash.development.base_component import Component, _explicitize_args
 
 
-class Flow(Component):
-    """A Flow component.
+class Background(Component):
+    """A Background component.
 
 
 Keyword arguments:
 
-- children (boolean | number | string | dict | list; optional)
-
 - id (string; optional):
     The ID used to identify this component in Dash callbacks.
 
-- elements (list of dicts; optional):
-    Node/edge elements contained within svg space.
+- className (string; optional)
 
-- style (dict; default {width: '800px', height: '600px'}):
-    CSS style attributes for div wrapper around ReactFlow component."""
+- color (string; default "#81818a")
+
+- gap (number; default 16)
+
+- size (number; default 0.5)
+
+- style (dict; optional)
+
+- variant (string; default "dots")"""
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, elements=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'elements', 'style']
-        self._type = 'Flow'
+    def __init__(self, id=Component.UNDEFINED, variant=Component.UNDEFINED, gap=Component.UNDEFINED, size=Component.UNDEFINED, color=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'color', 'gap', 'size', 'style', 'variant']
+        self._type = 'Background'
         self._namespace = 'dash_flow_components'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'elements', 'style']
+        self.available_properties = ['id', 'className', 'color', 'gap', 'size', 'style', 'variant']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
@@ -35,4 +39,4 @@ Keyword arguments:
             if k not in args:
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')
-        super(Flow, self).__init__(children=children, **args)
+        super(Background, self).__init__(**args)
