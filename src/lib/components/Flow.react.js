@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import ReactFlow, { addEdge } from 'react-flow-renderer';
 
@@ -15,16 +15,20 @@ const Flow = (props) => {
     } = props;
 
     console.log("elements", elements);
-    const [stateElements, setElements] = useState(elements);
+    const [stateElements, setElements] = useState([]);
     console.log("stateElements", stateElements);
+
+    // refresh nodes/edges
+    useEffect(() => {
+        setElements([
+            ...elements,
+            ...stateElements,
+        ]);
+    }, [elements]);
 
     const onConnect = (params) => {
         setElements((els) => addEdge(params, els))
     };
-
-    const onChange = (params) => {
-        console.log("onChange:", params);
-    }
 
     return (
         <div
@@ -35,7 +39,6 @@ const Flow = (props) => {
                 {...otherProps}
                 elements={stateElements}
                 onConnect={onConnect}
-                onChange={onChange}
             >
                 {children}
             </ReactFlow>

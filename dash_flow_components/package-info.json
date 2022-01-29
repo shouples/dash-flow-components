@@ -16,7 +16,8 @@
   "author": "Dave Shoup <dave.shoup@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "ramda": "^0.26.1"
+    "ramda": "^0.26.1",
+    "react-codemod": "^5.4.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
