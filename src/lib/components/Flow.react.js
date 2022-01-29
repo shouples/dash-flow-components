@@ -4,7 +4,6 @@ import ReactFlow, { addEdge } from 'react-flow-renderer';
 
 
 const Flow = (props) => {
-    
     const {
         id,
         setProps,
@@ -13,23 +12,22 @@ const Flow = (props) => {
         children,
         ...otherProps
     } = props;
+    
+    const [stateElements, setElements] = useState(elements);
+    const onConnect = (params) => setElements((els) => addEdge(params, els));
 
-    console.log("elements", elements);
-    const [stateElements, setElements] = useState([]);
-    console.log("stateElements", stateElements);
-
-    // refresh nodes/edges
+    // refresh nodes
     useEffect(() => {
-        setElements([
-            ...elements,
-            ...stateElements,
-        ]);
+        setElements(elements)        
     }, [elements]);
 
-    const onConnect = (params) => {
-        setElements((els) => addEdge(params, els))
-    };
-
+    // refresh drawn edges
+    useEffect(() => {
+        if (elements.length < stateElements.length){
+            setProps({elements : stateElements});
+        }
+    },[stateElements]);
+    
     return (
         <div
             id={id}
